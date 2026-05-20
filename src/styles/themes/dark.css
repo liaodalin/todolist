@@ -1,0 +1,16 @@
+/* src/styles/themes/dark.css */
+
+[data-theme="dark"] {
+  --bg-gradient: #1a1a2e;
+  --card-bg: #16213e;
+  --card-border: 1px solid rgba(255, 255, 255, 0.1);
+  --card-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  --text-primary: #e0e0e0;
+  --text-secondary: #a0a0a0;
+  --accent-todo: #ff6b6b;
+  --accent-doing: #4dabf7;
+  --accent-done: #51cf66;
+  --input-bg: #0f3460;
+  --input-border: rgba(255, 255, 255, 0.2);
+  --hover-bg: rgba(255, 255, 255, 0.05);
+}

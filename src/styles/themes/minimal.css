@@ -1,0 +1,16 @@
+/* src/styles/themes/minimal.css */
+
+[data-theme="minimal"] {
+  --bg-gradient: #f5f5f5;
+  --card-bg: #ffffff;
+  --card-border: 1px solid #e8e8e8;
+  --card-shadow: none;
+  --text-primary: #222222;
+  --text-secondary: #888888;
+  --accent-todo: #999999;
+  --accent-doing: #666666;
+  --accent-done: #333333;
+  --input-bg: #ffffff;
+  --input-border: #e0e0e0;
+  --hover-bg: rgba(0, 0, 0, 0.03);
+}

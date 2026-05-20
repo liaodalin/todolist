@@ -1,0 +1,16 @@
+/* src/styles/themes/colorful.css */
+
+[data-theme="colorful"] {
+  --bg-gradient: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+  --card-bg: #ffffff;
+  --card-border: none;
+  --card-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  --text-primary: #333333;
+  --text-secondary: #666666;
+  --accent-todo: #ff6b6b;
+  --accent-doing: #ffa502;
+  --accent-done: #2ed573;
+  --input-bg: #ffffff;
+  --input-border: #e0e0e0;
+  --hover-bg: rgba(0, 0, 0, 0.05);
+}
