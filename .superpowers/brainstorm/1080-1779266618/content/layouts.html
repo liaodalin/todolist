@@ -1,0 +1,114 @@
+<h2>三种布局模式</h2>
+<p class="subtitle">完整模式下可在顶部切换，迷你模式固定为列表视图</p>
+
+<div class="cards">
+  <div class="card" data-choice="list" onclick="toggleSelect(this)">
+    <div class="card-image">
+      <div style="padding: 20px; background: #fff5f5; min-height: 180px;">
+        <div style="font-size: 11px; font-weight: 600; color: #333; margin-bottom: 10px;">列表视图</div>
+        <div style="display: flex; flex-direction: column; gap: 6px;">
+          <div style="display: flex; align-items: center; gap: 8px; padding: 8px 10px; background: white; border-radius: 10px; box-shadow: 0 1px 3px rgba(0,0,0,0.06);">
+            <div style="width: 14px; height: 14px; background: #ff6b6b; border-radius: 50%; flex-shrink: 0;"></div>
+            <span style="font-size: 12px; color: #333;">完成项目方案设计</span>
+            <span style="font-size: 10px; color: #999; margin-left: auto;">今天</span>
+          </div>
+          <div style="display: flex; align-items: center; gap: 8px; padding: 8px 10px; background: white; border-radius: 10px; box-shadow: 0 1px 3px rgba(0,0,0,0.06);">
+            <div style="width: 14px; height: 14px; background: #ffa502; border-radius: 50%; flex-shrink: 0;"></div>
+            <span style="font-size: 12px; color: #333;">买菜做饭</span>
+            <span style="font-size: 10px; color: #999; margin-left: auto;">明天</span>
+          </div>
+          <div style="display: flex; align-items: center; gap: 8px; padding: 8px 10px; background: white; border-radius: 10px; box-shadow: 0 1px 3px rgba(0,0,0,0.06);">
+            <div style="width: 14px; height: 14px; background: #2ed573; border-radius: 50%; flex-shrink: 0;"></div>
+            <span style="font-size: 12px; color: #333;">回复客户邮件</span>
+            <span style="font-size: 10px; color: #999; margin-left: auto;">周五</span>
+          </div>
+          <div style="display: flex; align-items: center; gap: 8px; padding: 8px 10px; background: white; border-radius: 10px; box-shadow: 0 1px 3px rgba(0,0,0,0.06);">
+            <div style="width: 14px; height: 14px; background: #ffa502; border-radius: 50%; flex-shrink: 0;"></div>
+            <span style="font-size: 12px; color: #333;">学习 Rust</span>
+            <span style="font-size: 10px; color: #999; margin-left: auto;">下周一</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>列表视图</h3>
+      <p>每行一个任务，信息紧凑，适合快速浏览和操作</p>
+    </div>
+  </div>
+
+  <div class="card" data-choice="grid" onclick="toggleSelect(this)">
+    <div class="card-image">
+      <div style="padding: 20px; background: #f0f8ff; min-height: 180px;">
+        <div style="font-size: 11px; font-weight: 600; color: #333; margin-bottom: 10px;">卡片视图</div>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px;">
+          <div style="padding: 10px; background: white; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
+            <div style="width: 8px; height: 8px; background: #ff6b6b; border-radius: 50%; margin-bottom: 6px;"></div>
+            <div style="font-size: 11px; font-weight: 500; color: #333;">完成方案</div>
+            <div style="font-size: 10px; color: #999; margin-top: 4px;">工作 · 今天</div>
+          </div>
+          <div style="padding: 10px; background: white; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
+            <div style="width: 8px; height: 8px; background: #ffa502; border-radius: 50%; margin-bottom: 6px;"></div>
+            <div style="font-size: 11px; font-weight: 500; color: #333;">买菜做饭</div>
+            <div style="font-size: 10px; color: #999; margin-top: 4px;">生活 · 明天</div>
+          </div>
+          <div style="padding: 10px; background: white; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
+            <div style="width: 8px; height: 8px; background: #2ed573; border-radius: 50%; margin-bottom: 6px;"></div>
+            <div style="font-size: 11px; font-weight: 500; color: #333;">回复邮件</div>
+            <div style="font-size: 10px; color: #999; margin-top: 4px;">工作 · 周五</div>
+          </div>
+          <div style="padding: 10px; background: white; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
+            <div style="width: 8px; height: 8px; background: #ffa502; border-radius: 50%; margin-bottom: 6px;"></div>
+            <div style="font-size: 11px; font-weight: 500; color: #333;">学习 Rust</div>
+            <div style="font-size: 10px; color: #999; margin-top: 4px;">学习 · 下周一</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>卡片视图</h3>
+      <p>任务以卡片网格展示，视觉感更强</p>
+    </div>
+  </div>
+
+  <div class="card" data-choice="kanban" onclick="toggleSelect(this)">
+    <div class="card-image">
+      <div style="padding: 20px; background: #f5fff5; min-height: 180px;">
+        <div style="font-size: 11px; font-weight: 600; color: #333; margin-bottom: 10px;">看板视图</div>
+        <div style="display: flex; gap: 10px;">
+          <div style="flex: 1; background: rgba(0,0,0,0.03); border-radius: 10px; padding: 8px;">
+            <div style="font-size: 10px; font-weight: 600; color: #666; margin-bottom: 8px; text-align: center;">待办</div>
+            <div style="display: flex; flex-direction: column; gap: 6px;">
+              <div style="padding: 6px 8px; background: white; border-radius: 8px; font-size: 10px; color: #333; box-shadow: 0 1px 2px rgba(0,0,0,0.05);">买菜做饭</div>
+              <div style="padding: 6px 8px; background: white; border-radius: 8px; font-size: 10px; color: #333; box-shadow: 0 1px 2px rgba(0,0,0,0.05);">学习 Rust</div>
+            </div>
+          </div>
+          <div style="flex: 1; background: rgba(0,0,0,0.03); border-radius: 10px; padding: 8px;">
+            <div style="font-size: 10px; font-weight: 600; color: #666; margin-bottom: 8px; text-align: center;">进行中</div>
+            <div style="display: flex; flex-direction: column; gap: 6px;">
+              <div style="padding: 6px 8px; background: white; border-radius: 8px; font-size: 10px; color: #333; box-shadow: 0 1px 2px rgba(0,0,0,0.05);">完成方案</div>
+            </div>
+          </div>
+          <div style="flex: 1; background: rgba(0,0,0,0.03); border-radius: 10px; padding: 8px;">
+            <div style="font-size: 10px; font-weight: 600; color: #666; margin-bottom: 8px; text-align: center;">已完成</div>
+            <div style="display: flex; flex-direction: column; gap: 6px;">
+              <div style="padding: 6px 8px; background: white; border-radius: 8px; font-size: 10px; color: #999; text-decoration: line-through; box-shadow: 0 1px 2px rgba(0,0,0,0.05);">回复邮件</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>看板视图</h3>
+      <p>按状态分栏（待办/进行中/已完成），拖拽移动任务</p>
+    </div>
+  </div>
+</div>
+
+<div style="margin-top: 24px;">
+  <h3>补充说明</h3>
+  <div class="section">
+    <p><strong>迷你模式</strong>固定使用列表视图，保证紧凑性。</p>
+    <p><strong>完整模式</strong>下三种布局可自由切换，数据共享，只是展示形式不同。</p>
+    <p><strong>看板视图</strong>的列可以自定义（比如按分类分栏，或按优先级分栏），但初始版本先做"待办/进行中/已完成"三列。</p>
+  </div>
+</div>

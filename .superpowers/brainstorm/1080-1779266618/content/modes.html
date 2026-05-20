@@ -1,0 +1,121 @@
+<h2>两种窗口模式</h2>
+<p class="subtitle">迷你模式悬浮在桌面，完整模式展开全部功能</p>
+
+<div class="split">
+  <div class="mockup">
+    <div class="mockup-header">迷你模式（置顶悬浮）</div>
+    <div class="mockup-body" style="padding: 16px; background: linear-gradient(135deg, rgba(255,255,255,0.8), rgba(255,255,255,0.4)); backdrop-filter: blur(20px); border-radius: 16px; min-height: 260px; box-shadow: 0 8px 32px rgba(0,0,0,0.1); border: 1px solid rgba(255,255,255,0.3);">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+        <span style="font-size: 14px; font-weight: 600; color: #333;">我的待办</span>
+        <span style="font-size: 11px; color: #888; cursor: pointer;">展开 ▸</span>
+      </div>
+      <div style="display: flex; gap: 6px; margin-bottom: 12px;">
+        <span style="font-size: 11px; padding: 2px 8px; background: #667eea; color: white; border-radius: 10px;">全部</span>
+        <span style="font-size: 11px; padding: 2px 8px; background: rgba(0,0,0,0.06); color: #666; border-radius: 10px;">工作</span>
+        <span style="font-size: 11px; padding: 2px 8px; background: rgba(0,0,0,0.06); color: #666; border-radius: 10px;">生活</span>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        <div style="display: flex; align-items: center; gap: 8px; padding: 8px 10px; background: rgba(255,255,255,0.6); border-radius: 10px;">
+          <div style="width: 16px; height: 16px; border: 2px solid #667eea; border-radius: 50%; flex-shrink: 0;"></div>
+          <div style="flex: 1; min-width: 0;">
+            <div style="font-size: 13px; color: #333; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">完成项目方案设计</div>
+            <div style="font-size: 11px; color: #e74c3c;">今天截止</div>
+          </div>
+        </div>
+        <div style="display: flex; align-items: center; gap: 8px; padding: 8px 10px; background: rgba(255,255,255,0.6); border-radius: 10px;">
+          <div style="width: 16px; height: 16px; border: 2px solid #667eea; border-radius: 50%; flex-shrink: 0;"></div>
+          <div style="flex: 1; min-width: 0;">
+            <div style="font-size: 13px; color: #333; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">买菜做饭</div>
+            <div style="font-size: 11px; color: #888;">明天</div>
+          </div>
+        </div>
+        <div style="display: flex; align-items: center; gap: 8px; padding: 8px 10px; background: rgba(255,255,255,0.6); border-radius: 10px;">
+          <div style="width: 16px; height: 16px; border: 2px solid #667eea; border-radius: 50%; flex-shrink: 0;"></div>
+          <div style="flex: 1; min-width: 0;">
+            <div style="font-size: 13px; color: #333; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">回复客户邮件</div>
+            <div style="font-size: 11px; color: #888;">周五</div>
+          </div>
+        </div>
+      </div>
+      <div style="margin-top: 12px; display: flex; gap: 8px;">
+        <input style="flex: 1; padding: 6px 10px; border: 1px solid rgba(0,0,0,0.1); border-radius: 8px; font-size: 12px; background: rgba(255,255,255,0.5);" placeholder="添加任务...">
+        <button style="padding: 6px 12px; background: #667eea; color: white; border: none; border-radius: 8px; font-size: 12px; cursor: pointer;">+</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="mockup">
+    <div class="mockup-header">完整模式（展开视图）</div>
+    <div class="mockup-body" style="padding: 16px; background: linear-gradient(135deg, rgba(255,255,255,0.8), rgba(255,255,255,0.4)); backdrop-filter: blur(20px); border-radius: 16px; min-height: 260px; box-shadow: 0 8px 32px rgba(0,0,0,0.1); border: 1px solid rgba(255,255,255,0.3);">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+        <span style="font-size: 14px; font-weight: 600; color: #333;">我的待办</span>
+        <div style="display: flex; gap: 8px; align-items: center;">
+          <span style="font-size: 11px; padding: 2px 8px; background: rgba(0,0,0,0.06); color: #666; border-radius: 10px; cursor: pointer;">列表</span>
+          <span style="font-size: 11px; padding: 2px 8px; background: #667eea; color: white; border-radius: 10px; cursor: pointer;">卡片</span>
+          <span style="font-size: 11px; padding: 2px 8px; background: rgba(0,0,0,0.06); color: #666; border-radius: 10px; cursor: pointer;">看板</span>
+          <span style="font-size: 11px; color: #888; cursor: pointer;">收起 ◂</span>
+        </div>
+      </div>
+      <div style="display: flex; gap: 6px; margin-bottom: 12px;">
+        <span style="font-size: 11px; padding: 2px 8px; background: #667eea; color: white; border-radius: 10px;">全部</span>
+        <span style="font-size: 11px; padding: 2px 8px; background: rgba(0,0,0,0.06); color: #666; border-radius: 10px;">工作</span>
+        <span style="font-size: 11px; padding: 2px 8px; background: rgba(0,0,0,0.06); color: #666; border-radius: 10px;">生活</span>
+        <span style="font-size: 11px; padding: 2px 8px; background: rgba(0,0,0,0.06); color: #666; border-radius: 10px;">学习</span>
+        <span style="font-size: 11px; padding: 2px 6px; background: rgba(0,0,0,0.06); color: #888; border-radius: 10px; cursor: pointer;">+</span>
+      </div>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px;">
+        <div style="padding: 10px; background: rgba(255,255,255,0.7); border-radius: 10px; border-left: 3px solid #e74c3c;">
+          <div style="font-size: 12px; font-weight: 500; color: #333;">完成项目方案设计</div>
+          <div style="font-size: 11px; color: #888; margin-top: 4px;">工作 · 今天截止</div>
+        </div>
+        <div style="padding: 10px; background: rgba(255,255,255,0.7); border-radius: 10px; border-left: 3px solid #f39c12;">
+          <div style="font-size: 12px; font-weight: 500; color: #333;">买菜做饭</div>
+          <div style="font-size: 11px; color: #888; margin-top: 4px;">生活 · 明天</div>
+        </div>
+        <div style="padding: 10px; background: rgba(255,255,255,0.7); border-radius: 10px; border-left: 3px solid #3498db;">
+          <div style="font-size: 12px; font-weight: 500; color: #333;">回复客户邮件</div>
+          <div style="font-size: 11px; color: #888; margin-top: 4px;">工作 · 周五</div>
+        </div>
+        <div style="padding: 10px; background: rgba(255,255,255,0.7); border-radius: 10px; border-left: 3px solid #2ecc71;">
+          <div style="font-size: 12px; font-weight: 500; color: #333;">学习 Rust 所有权</div>
+          <div style="font-size: 11px; color: #888; margin-top: 4px;">学习 · 下周一</div>
+        </div>
+      </div>
+      <div style="margin-top: 12px; display: flex; gap: 8px;">
+        <input style="flex: 1; padding: 6px 10px; border: 1px solid rgba(0,0,0,0.1); border-radius: 8px; font-size: 12px; background: rgba(255,255,255,0.5);" placeholder="添加任务...">
+        <select style="padding: 6px 8px; border: 1px solid rgba(0,0,0,0.1); border-radius: 8px; font-size: 11px; background: rgba(255,255,255,0.5);">
+          <option>分类</option>
+        </select>
+        <input type="date" style="padding: 6px 8px; border: 1px solid rgba(0,0,0,0.1); border-radius: 8px; font-size: 11px; background: rgba(255,255,255,0.5);">
+        <button style="padding: 6px 12px; background: #667eea; color: white; border: none; border-radius: 8px; font-size: 12px; cursor: pointer;">添加</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div style="margin-top: 24px;">
+  <h3>切换方式</h3>
+  <div class="options">
+    <div class="option" data-choice="a" onclick="toggleSelect(this)">
+      <div class="letter">A</div>
+      <div class="content">
+        <h3>右上角按钮切换</h3>
+        <p>迷你模式右上角显示"展开"按钮，完整模式显示"收起"按钮</p>
+      </div>
+    </div>
+    <div class="option" data-choice="b" onclick="toggleSelect(this)">
+      <div class="letter">B</div>
+      <div class="content">
+        <h3>双击标题栏切换</h3>
+        <p>双击窗口标题栏区域在两种模式间切换</p>
+      </div>
+    </div>
+    <div class="option" data-choice="c" onclick="toggleSelect(this)">
+      <div class="letter">C</div>
+      <div class="content">
+        <h3>拖拽边缘展开</h3>
+        <p>拖拽窗口边缘自动从迷你切换到完整模式</p>
+      </div>
+    </div>
+  </div>
+</div>
