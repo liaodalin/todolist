@@ -1,6 +1,7 @@
 // src/components/MiniMode.tsx
 
-import React, { useState } from "react";
+import React, { useCallback, useState } from "react";
+import { getCurrentWindow } from "@tauri-apps/api/window";
 import { TitleBar } from "./TitleBar";
 import { CategoryTabs } from "./CategoryTabs";
 import { TaskList } from "./TaskList";
@@ -26,6 +27,14 @@ export const MiniMode: React.FC<Props> = ({
 }) => {
   const [selectedCategory, setSelectedCategory] = useState("all");
 
+  const handleHide = useCallback(async () => {
+    try {
+      await getCurrentWindow().hide();
+    } catch (err) {
+      console.error("Failed to hide window:", err);
+    }
+  }, []);
+
   const filteredTasks =
     selectedCategory === "all"
       ? tasks
@@ -42,14 +51,14 @@ export const MiniMode: React.FC<Props> = ({
         overflow: "hidden",
       }}
     >
-      <TitleBar onExpand={onExpand} />
+      <TitleBar onExpand={onExpand} onHide={handleHide} />
       <CategoryTabs
         categories={categories}
         selected={selectedCategory}
         onSelect={setSelectedCategory}
       />
       <TaskList tasks={filteredTasks} onToggle={onToggleTask} onClick={onClickTask} />
-      <AddTask categories={categories} onAdd={onAddTask} />
+      <AddTask categories={categories} onAdd={onAddTask} mini />
     </div>
   );
 };

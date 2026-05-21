@@ -1,4 +1,5 @@
 mod commands;
+mod models;
 mod storage;
 mod tray;
 

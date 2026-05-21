@@ -17,7 +17,7 @@ function App() {
   const { switchMode } = useWindow();
 
   useEffect(() => {
-    invoke<AppData>("load_data").then((loaded) => {
+    invoke<AppData>("load_data").then(async (loaded) => {
       const fullData: AppData = {
         tasks: loaded.tasks || [],
         categories: loaded.categories?.length ? loaded.categories : DEFAULT_CATEGORIES,
@@ -26,7 +26,10 @@ function App() {
       setData(fullData);
       setTheme(fullData.settings.theme as Theme);
       setLayout(fullData.settings.layout as Layout);
-      setMode(fullData.settings.mode as Mode);
+      const savedMode = fullData.settings.mode as Mode;
+      setMode(savedMode);
+      // Apply window properties based on saved mode
+      await switchMode(savedMode);
     });
   }, []);
 
